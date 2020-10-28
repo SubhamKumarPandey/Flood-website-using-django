@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'rbb-mtl&ly+clcgm=gd&isf2xf2fd45d8sxoni6zua3zw8#w3a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = Flase
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['flood-website.herokuapp.com']
 
 
 # Application definition
