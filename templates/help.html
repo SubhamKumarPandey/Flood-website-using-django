@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Help{% endblock title %}
+
+
+{% block body %}
+
+  <div class="container" style="padding-top: 3%;">
+  <div class="card border-darkgray" style="max-width: 100rem;">
+      <form action="/help" method="GET">
+        <div class="form-group">
+          <label for="exampleInputEmail1" style="font-size: 2.5ch; padding-bottom: 1%;">What's Your Query</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Query" name="query">
+        </div>
+        <button type="submit" class="btn btn-outline-danger">Search</button>
+      </form>
+      </div>
+
+
+      {% if ans %}
+   <div class="card text-white bg-info mb-3" style="max-width: 33rem;">
+  <div class="card-header"></div>
+  <div class="card-body">
+    <h5 class="card-title"><h4 style="color: darkgray; padding-top: 2%;">Search Result for {{query}} :</h4></h5>
+    <p class="card-text"><h4 style="padding-top: 2%;">{{ans}}</h4></p>
+  </div>
+</div>
+
+      {% endif %}
+    </div>
+{% endblock body %}

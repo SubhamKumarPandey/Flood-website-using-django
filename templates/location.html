@@ -1,0 +1,117 @@
+{% extends 'base.html' %} {% block title %}Location{% endblock title %} {% block body %}
+
+
+<!--CONTACT US AREA-->
+
+<div style="margin-left:45px;">
+<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77419.79488196888!2d83.90791572191075!3d25.575707170998612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399275094abae8d9%3A0x980437585680a906!2sFlood%20Control%20Office!5e0!3m2!1sen!2sin!4v1603856851371!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></P>
+    <p>
+        <h3><strong>Share a map or directions with others</strong></h3>
+        <br>You can share a location, directions, or a map. You can share:
+
+        <br>A place, business, or address
+        <br>A directions search
+        <br>A Street View image
+        <h4>You can't share:</h4>
+
+        A map with your saved locations, which are private
+        <br>A map with a distance measurement
+        <br>A screenshot or image of the map itself</p>
+    <div class="card-deck">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Android</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Share a map or location</h6>
+                <p class="card-text">On your Android phone or tablet,<br> open the Google Maps app Google Maps.<br> Search for a place. Or, find a place on the map,<br> then touch and hold to drop a pin.<br> At the bottom, tap the place's name or address.<br> Tap Share icon.<br>                    If you don't see share icon, tap More icon and then Share.<br> Choose the app where you want to share the link to the map.</p><br><br>
+                <a href="https://www.google.com/maps" class="">map link</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Computer</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Share a map or location</h6>
+                <p class="card-text">
+                    <ol>
+                        <li>On your computer, open</li>
+                        <li>Go to the directions, map, or Street View image you want to share.</li>
+                        <li>Select Share or embed map. If you don't see this option, click Link to this map.
+                            <ul>Optional: To create a shorter web page link, check the box next to "Short URL."</ul>
+                        </li>
+                        <li>Copy and paste the link wherever you want to share the map.</li>
+                        <li></li>
+                    </ol>
+                </p>
+                <br><a href="https://www.google.com/maps" class="card-link">map link</a>
+
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">iphone & ipad</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Share a map or location</h6>
+                <p class="card-text">
+                    <ol>
+                        <li>On your iPhone or iPad, open the Google Maps app </li>
+                        <li>Search for a place. Or, find a place on the map, then touch and hold to drop a pin.</li>
+                        <li>At the bottom, tap the place's name or address.</li>
+                        <li>At the bottom, tap the place's name or address.</li>
+                        <li>Choose the app where you want to share the link to the map.
+
+                        </li>
+                    </ol>
+                </p><br><br><br><br>
+                <a href="https://www.google.com/maps" class="card-link">map link</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="contact-area" id="contact">
+    <div class="map-area relative">
+        <!-- <h1>My First Google Map</h1> -->
+
+        <div class="contact-form-area section-padding gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                        <div class="area-title text-center">
+                            <h2>Please Share Your Details</h2>
+                            <p>Follow the instructions and provide details below.Our Team will be their soon .Please Take Care of yourself</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container mb-3 py-4">
+    <h1 class="text-center"></h1>
+    <form method="post" action="/location">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+        </div>
+        <div class="form-group">
+            <label for="desc1">Write Your complete Address</label>
+            <textarea class="form-control" id="desc1 rows=" 3 " name="desc1 " placeholder="Enter your address "></textarea>
+        </div>
+
+
+        <div class="form-group ">
+            <label for="phone ">Phone Number</label>
+            <input type="phone " class="form-control " id="phone " name="phone " placeholder="Enter Your Phone Number ">
+        </div>
+
+        <div class="form-group ">
+            <label for="desc ">Please Share your issue</label>
+            <textarea class="form-control " id="desc " rows="3 " name="desc " placeholder="Enter your Issue "></textarea>
+        </div>
+        <button class="btn btn-primary " type="submit ">Submit</button>
+    </form>
+
+</div>
+
+
+{% endblock body %}

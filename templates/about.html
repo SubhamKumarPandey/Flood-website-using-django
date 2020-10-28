@@ -1,0 +1,114 @@
+
+{% extends 'base.html' %}{%load static%} {% block title %}About us{% endblock title %}{% block head %}
+{% load static %}
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>{% endblock head %} {% block body %}
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1>About us</h1>
+        <p class="lead text-muted">"Man's mind, once stretched by a new idea, never regains its original dimensions." — Oliver Wendell Holmes</p>
+
+        <p class="lead text-muted">Need to Contact us, Help us ?</p>
+        <p>
+            <a href="/contact" class="btn btn-primary my-2">Contact</a>
+            <a href="/login" class="btn btn-secondary my-2">Login</a>
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card profile-card-2">
+                    <div class="card-img-block">
+                        <img class="img-fluid" src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Card image cap">
+                    </div>
+                    <div class="card-body pt-5">
+                        <img src="{% static 'images/subham.jpg' %}" alt="profile-image" class="profile" />
+                        <h5 class="card-title">Subham Kumar Pandey</h5>
+                        <p class="card-text">Developer</p>
+                        <p class="card-text">Registration No. 11908327</p>
+                        <div class="icon-block text-center">
+                            <a href="https://www.linkedin.com/in/subham-kumar-pandey-9a9b70192/"><button type="button" class="btn btn-li"><i class="fab fa-linkedin-in pr-1"></i> </button></a>
+                            <a href="https://github.com/SubhamKumarPandey/"><button type="button" class="btn btn-git"><i class="fab fa-github pr-1"></i> </button></a>
+                            <a href="https://mail.google.com/"> <button type="button" class="btn btn-email"><i class="fas fa-envelope pr-1"></i></button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Profile Card 3-->
+            <div class="col-md-4">
+                <div class="card profile-card-3">
+                    <div class="background-block">
+                        <img src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="profile-sample1" class="background" />
+                    </div>
+                    <div class="profile-thumb-block">
+                        <img src="{% static 'images/shiv.jpg' %}" alt="profile-image" class="profile" />
+                    </div>
+                    <div class="card-content">
+                        <h2>Shiv Kumar Verma<small>Developer</small></h3>
+                            <p>Registration No. 11908263</p>
+
+                            <div class="icon-block text-center">
+                                <a href="https://www.linkedin.com/in/shiv-kumar-verma-3a8a83192/"><button type="button" class="btn btn-li"><i class="fab fa-linkedin-in pr-1"></i> </button></a>
+                                <a href="https://github.com/shivkumarverma"> <button type="button" class="btn btn-git"><i class="fab fa-github pr-1"></i> </button></a>
+                                <a href="https://mail.google.com/"> <button type="button" class="btn btn-email"><i class="fas fa-envelope pr-1"></i></button></a>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--Profile Card 4-->
+            <div class="col-md-4 mt-4">
+                <div class="card profile-card-4">
+                    <div class="card-img-block">
+                        <img class="img-fluid" src="{% static 'images/bac.jpg' %}" alt="Card image cap">
+                    </div>
+                    <div class="card-body pt-5">
+                        <img src="{% static 'images/yogesh.jpg' %}" alt="profile-image" class="profile" />
+                        <h5 class="card-title text-center">Yogesh Choudhary</h5>
+                        <p class=" text-center">Developer</p>
+                        <p class=" text-center">Registration No.11904992</p>
+                        <div class="icon-block text-center">
+                            <a href="https://www.linkedin.com/"><button type="button" class="btn btn-li"><i class="fab fa-linkedin-in pr-1"></i> </button></a>
+                            <a href="https://github.com/"></a> <button type="button" class="btn btn-git"><i class="fab fa-github pr-1"></i> </button></a>
+                            <a href="https://mail.google.com/"> <button type="button" class="btn btn-email"><i class="fas fa-envelope pr-1"></i></button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mt-4">
+                <div class="card profile-card-4">
+                    <div class="card-img-block">
+                        <img class="img-fluid" src="{% static 'images/abc.jpg' %}" alt="Card image cap">
+                    </div>
+                    <div class="card-body pt-5">
+                        <img src="{% static 'images/Sravani.jpg' %}" alt="profile-image" class="profile" />
+                        <h5 class="card-title text-center">Sravani bhulle</h5>
+                        <p class="card-text text-center">           Developer</p>
+                        <p class="card-text text-center">Registration No.12014190</p>
+                        <div class="icon-block text-center">
+                            <a href="https://www.linkedin.com/"><button type="button" class="btn btn-li"><i class="fab fa-linkedin-in pr-1"></i> </button></a>
+                            <a href="https://github.com/"></a> <button type="button" class="btn btn-git"><i class="fab fa-github pr-1"></i> </button></a>
+                            <a href="https://mail.google.com/"> <button type="button" class="btn btn-email"><i class="fas fa-envelope pr-1"></i></button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock body %}

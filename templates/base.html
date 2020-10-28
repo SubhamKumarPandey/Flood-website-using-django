@@ -1,0 +1,852 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer.css" rel="stylesheet">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+
+
+
+    <style>
+        @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+        @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        *:hover {
+            -webkit-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+        
+        section {
+            float: left;
+            width: 100%;
+            background: #fff;
+            /* fallback for old browsers */
+            padding: 30px 0;
+        }
+        
+        h1 {
+            float: left;
+            width: 100%;
+            color: #232323;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        h1 span {
+            font-family: 'Libre Baskerville', serif;
+            display: block;
+            font-size: 45px;
+            text-transform: none;
+            margin-bottom: 20px;
+            margin-top: 30px;
+            font-weight: 700
+        }
+        
+        h1 a {
+            color: #131313;
+            font-weight: bold;
+        }
+        /*Profile Card 1*/
+        
+        .profile-card-1 {
+            font-family: 'Open Sans', Arial, sans-serif;
+            position: relative;
+            float: left;
+            overflow: hidden;
+            width: 100%;
+            color: #ffffff;
+            text-align: center;
+            height: 368px;
+            border: none;
+        }
+        
+        .profile-card-1 .background {
+            width: 100%;
+            vertical-align: top;
+            opacity: 0.9;
+            -webkit-filter: blur(5px);
+            filter: blur(5px);
+            -webkit-transform: scale(1.8);
+            transform: scale(2.8);
+        }
+        
+        .profile-card-1 .card-content {
+            width: 100%;
+            padding: 15px 25px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+        
+        .profile-card-1 .profile {
+            border-radius: 50%;
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            max-width: 100px;
+            opacity: 1;
+            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 255, 255, 1);
+            -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+        }
+        
+        .profile-card-1 h2 {
+            margin: 0 0 5px;
+            font-weight: 600;
+            font-size: 25px;
+        }
+        
+        .profile-card-1 h2 small {
+            display: block;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        
+        .profile-card-1 i {
+            display: inline-block;
+            font-size: 16px;
+            color: #ffffff;
+            text-align: center;
+            border: 1px solid #fff;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+        
+        .profile-card-1 .icon-block {
+            float: left;
+            width: 100%;
+            margin-top: 15px;
+        }
+        
+        .profile-card-1 .icon-block a {
+            text-decoration: none;
+        }
+        
+        .profile-card-1 i:hover {
+            background-color: #fff;
+            color: #2E3434;
+            text-decoration: none;
+        }
+        /*Profile card 2*/
+        
+        .profile-card-2 .card-img-block {
+            float: left;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+        }
+        
+        .profile-card-2 .card-body {
+            position: relative;
+        }
+        
+        .profile-card-2 .profile {
+            border-radius: 50%;
+            position: absolute;
+            top: -42px;
+            left: 15%;
+            max-width: 75px;
+            border: 3px solid rgba(255, 255, 255, 1);
+            -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+        }
+        
+        .profile-card-2 h5 {
+            font-weight: 600;
+            color: #6ab04c;
+        }
+        
+        .profile-card-2 .card-text {
+            font-weight: 300;
+            font-size: 15px;
+        }
+        
+        .profile-card-2 .icon-block {
+            float: left;
+            width: 100%;
+        }
+        
+        .profile-card-2 .icon-block a {
+            text-decoration: none;
+        }
+        
+        .profile-card-2 i {
+            display: inline-block;
+            font-size: 16px;
+            color: #6ab04c;
+            text-align: center;
+            border: 1px solid #6ab04c;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+        
+        .profile-card-2 i:hover {
+            background-color: #6ab04c;
+            color: #fff;
+        }
+        /*Profile Card 3*/
+        
+        .profile-card-3 {
+            font-family: 'Open Sans', Arial, sans-serif;
+            position: relative;
+            float: left;
+            overflow: hidden;
+            width: 100%;
+            text-align: center;
+            height: 368px;
+            border: none;
+        }
+        
+        .profile-card-3 .background-block {
+            float: left;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .profile-card-3 .background-block .background {
+            width: 100%;
+            vertical-align: top;
+            opacity: 0.9;
+            -webkit-filter: blur(0.5px);
+            filter: blur(0.5px);
+            -webkit-transform: scale(1.8);
+            transform: scale(2.8);
+        }
+        
+        .profile-card-3 .card-content {
+            width: 100%;
+            padding: 15px 25px;
+            color: #232323;
+            float: left;
+            background: #efefef;
+            height: 50%;
+            border-radius: 0 0 5px 5px;
+            position: relative;
+            z-index: 9999;
+        }
+        
+        .profile-card-3 .card-content::before {
+            content: '';
+            background: #efefef;
+            width: 120%;
+            height: 100%;
+            left: 11px;
+            bottom: 51px;
+            position: absolute;
+            z-index: -1;
+            transform: rotate(-13deg);
+        }
+        
+        .profile-card-3 .profile {
+            border-radius: 50%;
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            max-width: 100px;
+            opacity: 1;
+            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 255, 255, 1);
+            -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+            z-index: 99999;
+        }
+        
+        .profile-card-3 h2 {
+            margin: 0 0 5px;
+            font-weight: 600;
+            font-size: 25px;
+        }
+        
+        .profile-card-3 h2 small {
+            display: block;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        
+        .profile-card-3 i {
+            display: inline-block;
+            font-size: 16px;
+            color: #232323;
+            text-align: center;
+            border: 1px solid #232323;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+        
+        .profile-card-3 .icon-block {
+            float: left;
+            width: 100%;
+            margin-top: 15px;
+        }
+        
+        .profile-card-3 .icon-block a {
+            text-decoration: none;
+        }
+        
+        .profile-card-3 i:hover {
+            background-color: #232323;
+            color: #fff;
+            text-decoration: none;
+        }
+        /*Profile card 4*/
+        
+        .profile-card-4 .card-img-block {
+            float: left;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+        }
+        
+        .profile-card-4 .card-body {
+            position: relative;
+        }
+        
+        .profile-card-4 .profile {
+            border-radius: 50%;
+            position: absolute;
+            top: -62px;
+            left: 50%;
+            width: 100px;
+            border: 3px solid rgba(255, 255, 255, 1);
+            margin-left: -50px;
+        }
+        
+        .profile-card-4 .card-img-block {
+            position: relative;
+        }
+        
+        .profile-card-4 .card-img-block>.info-box {
+            position: absolute;
+            background: rgba(217, 11, 225, 0.6);
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            -webkit-transition: 1s ease;
+            transition: 1s ease;
+            opacity: 0;
+        }
+        
+        .profile-card-4 .card-img-block:hover>.info-box {
+            opacity: 1;
+            -webkit-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+        
+        .profile-card-4 h5 {
+            font-weight: 600;
+            color: #d90be1;
+        }
+        
+        .profile-card-4 .card-text {
+            font-weight: 300;
+            font-size: 15px;
+        }
+        
+        .profile-card-4 .icon-block {
+            float: left;
+            width: 100%;
+        }
+        
+        .profile-card-4 .icon-block a {
+            text-decoration: none;
+        }
+        
+        .profile-card-4 i {
+            display: inline-block;
+            font-size: 16px;
+            color: #d90be1;
+            text-align: center;
+            border: 1px solid #d90be1;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+        
+        .profile-card-4 i:hover {
+            background-color: #d90be1;
+            color: #fff;
+        }
+        /*Profile Card 5*/
+        
+        .profile-card-5 {
+            margin-top: 20px;
+        }
+        
+        .profile-card-5 .btn {
+            border-radius: 2px;
+            text-transform: uppercase;
+            font-size: 12px;
+            padding: 7px 20px;
+        }
+        
+        .profile-card-5 .card-img-block {
+            width: 91%;
+            margin: 0 auto;
+            position: relative;
+            top: -20px;
+        }
+        
+        .profile-card-5 .card-img-block img {
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.63);
+        }
+        
+        .profile-card-5 h5 {
+            color: #4E5E30;
+            font-weight: 600;
+        }
+        
+        .profile-card-5 p {
+            font-size: 14px;
+            font-weight: 300;
+        }
+        
+        .profile-card-5 .btn-primary {
+            background-color: #4E5E30;
+            border-color: #4E5E30;
+        }
+        
+        body {
+            background-color: #eee;
+        }
+        
+        .title {
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+        
+        .card-block {
+            font-size: 1em;
+            position: relative;
+            margin: 0;
+            padding: 1em;
+            border: none;
+            border-top: 1px solid rgba(34, 36, 38, .1);
+            box-shadow: none;
+        }
+        
+        .card {
+            font-size: 1em;
+            overflow: hidden;
+            padding: 5;
+            border: none;
+            border-radius: .28571429rem;
+            box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+            margin-top: 20px;
+        }
+        
+        .carousel-indicators li {
+            border-radius: 12px;
+            width: 12px;
+            height: 12px;
+            background-color: #404040;
+        }
+        
+        .carousel-indicators li {
+            border-radius: 12px;
+            width: 12px;
+            height: 12px;
+            background-color: #404040;
+        }
+        
+        .carousel-indicators .active {
+            background-color: white;
+            max-width: 12px;
+            margin: 0 3px;
+            height: 12px;
+        }
+        
+        .carousel-control-prev-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+        }
+        
+        .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+        }
+        
+        .btn {
+            margin-top: auto;
+        }
+        
+        .stretch-card>.card {
+            width: 100%;
+            min-width: 100%
+        }
+        
+        body {
+            background-color: #f9f9fa
+        }
+        
+        .flex {
+            -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto
+        }
+        
+        @media (max-width:991.98px) {
+            .padding {
+                padding: 1.5rem
+            }
+        }
+        
+        @media (max-width:767.98px) {
+            .padding {
+                padding: 1rem
+            }
+        }
+        
+        .padding {
+            padding: 5rem
+        }
+        
+        .grid-margin,
+        .purchace-popup>div {
+            margin-bottom: 25px
+        }
+        
+        .card {
+            border: 0;
+            border-radius: 2px
+        }
+        
+        .card-weather {
+            background: #e1ecff;
+            background-image: linear-gradient(to left bottom, #d6eef6, #dff0fa, #e7f3fc, #eff6fe, #f6f9ff)
+        }
+        
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            border-radius: 0.25rem
+        }
+        
+        .card-weather .card-body:first-child {
+            background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1557323760/weather.svg) no-repeat center;
+            background-size: cover
+        }
+        
+        .card .card-body {
+            padding: 1.88rem 1.81rem
+        }
+        
+        .card-body {
+            flex: 1 1 auto;
+            padding: 1.25rem
+        }
+        
+        .card-weather .weather-date-location {
+            padding: 0 0 38px
+        }
+        
+        .h3,
+        h3 {
+            font-size: 1.56rem
+        }
+        
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500
+        }
+        
+        .text-gray,
+        .card-subtitle,
+        .new-accounts ul.chats li.chat-persons a p.joined-date {
+            color: #969696
+        }
+        
+        p {
+            font-size: 13px
+        }
+        
+        .text-gray,
+        .card-subtitle,
+        .new-accounts ul.chats li.chat-persons a p.joined-date {
+            color: #969696
+        }
+        
+        .card-weather .weather-data {
+            padding: 0 0 4.75rem
+        }
+        
+        .mr-auto,
+        .mx-auto {
+            margin-right: auto !important
+        }
+        
+        .display-3 {
+            font-size: 2.5rem
+        }
+        
+        .card-weather .card-body {
+            background: #ffffff
+        }
+        
+        .card-weather .weakly-weather {
+            background: #ffffff;
+            overflow-x: auto
+        }
+        
+        .card-weather .weakly-weather .weakly-weather-item {
+            flex: 0 0 14.28%;
+            border-right: 1px solid #f2f2f2;
+            padding: 1rem;
+            text-align: center
+        }
+        
+        .mb-0,
+        .my-0 {
+            margin-bottom: 0 !important
+        }
+        
+        .card-weather .weakly-weather .weakly-weather-item i {
+            font-size: 1.2rem
+        }
+        
+        .carousel-inner>.item>img,
+        .carousel-inner>.item>a>img {
+            width: 100%;
+        }
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+        body {
+            height: 100%;
+            -ms-flex-align: center;
+            -ms-flex-pack: center;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+        
+        .form-signin {
+            width: 100%;
+            max-width: 330px;
+            padding: 15px;
+            margin: 80px auto;
+        }
+        
+        .form-signin .checkbox {
+            font-weight: 400;
+        }
+        
+        .form-signin .form-control {
+            position: relative;
+            box-sizing: border-box;
+            height: auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+        .form-signin .form-control:focus {
+            z-index: 2;
+        }
+        
+        .form-signin input[type="email"] {
+            margin-bottom: 20px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        
+        .form-signin input[type="password"] {
+            margin-bottom: 20px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        
+        .form-signin input[type="text"] {
+            margin-bottom: 20px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        
+        .footer {
+            width: 100%;
+            /* Set the fixed height of the footer here */
+            height: 60px;
+            line-height: 60px;
+            /* Vertically center the text there */
+            background-color: #212529;
+            margin-bottom: 0;
+            ;
+        }
+        /* Custom page CSS
+          -------------------------------------------------- */
+        /* Not required for template or sticky footer method. */
+        
+        .footer.container {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        
+        .float-right {
+            margin-bottom: 0;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')
+    </script>
+    <script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+    <title> {% block title %}{% endblock title %} | Flood-Relief</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body>
+    <div class="card text-center bg-secondary">
+        <div class="card-body">
+            <h5 class="card-title">Flood Relief</h5>
+        </div>
+    </div>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/home1">Home</a>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/emergency" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Emergency
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/location">Share Location</a>
+                        <a class="dropdown-item" href="/issue">write Issue</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/help">Help</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/data" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Data Analysis
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/data1"> flood report</a>
+                        <a class="dropdown-item" href="/rivers">Rivers</a>
+
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/reliefcamp">Relief Camp</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/donation">Make Donation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact Us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">!-->
+                <ul class="navbar-nav mr-auto">
+                    {% if user.is_authenticated %}
+                    <li class="nav-link">Hello, {{user.first_name}} </li>
+                    <li class="nav-item"><a class="nav-link" href='/logout'>Logout</a></li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </form>
+        </div>
+    </nav>
+    {%block body%} {% endblock body%}
+    <footer class="footer mt-auto ">
+        <div class="container">
+            <span class="text-muted">click to meet <a href="/about">Our team</a>.</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

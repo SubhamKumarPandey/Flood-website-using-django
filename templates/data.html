@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block title %}Data Analysis{% endblock title %} {% block body %}
+
+<br>
+<br>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       flood report,  year Select year   
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="/data1">2000-2020</a>
+        <a class="dropdown-item" href="/data2">1980-2000</a>
+        <a class="dropdown-item" href="/data3">1960-1980</a>
+        <a class="dropdown-item" href="/data4">1940-1960</a>
+    </div>
+</div>
+<br>
+<br>
+<br> {% block databody %}{% endblock databody %} {% endblock body %}

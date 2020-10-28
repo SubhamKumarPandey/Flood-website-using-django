@@ -1,0 +1,35 @@
+{% extends 'base.html' %}{% block title %}weather{% endblock title %} {% block body %}
+<form class="form-signin" method="get">
+    <h1 class="h3 mb-3 font-weight-normal">Weather</h1>
+    <label for="city" class="sr-only">City</label>
+    <input type="text" class="form-control" id="city" name="city" placeholder="City.....">
+    <input class="btn btn-lg btn-primary btn-block" type="submit">
+
+
+</form>
+
+<div class="page-content page-container" id="page-content" style="margin-left:10rem;">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+            <div class="col-lg-8 grid-margin stretch-card">
+                <!--weather card-->
+                <div class="card card-weather">
+                    <div class="card-body">
+                        <div class="weather-date-location">
+                            <h3>{{weather.daytime}}</h3>
+                            <p class="text-gray"> <span class="weather-date">{{weather.region}}</span> </p>
+                        </div>
+                        <div class="weather-data d-flex">
+                            <div class="mr-auto">
+                                <h4 class="display-3">{{weather.temp}}<span class="symbol">°</span>C</h4>
+                                <p>{{weather.status}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--weather card ends-->
+    </div>
+</div>
+</div> {% endblock body %}

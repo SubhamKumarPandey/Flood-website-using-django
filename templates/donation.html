@@ -1,0 +1,82 @@
+{% extends 'base.html' %} {% block title %}Make Donation{% endblock title %} {% block body %}
+<br><br><br>
+<div class="card-deck" style="margin-left:150px;">
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header">Paytm</div>
+        <div class="card-body text-success">
+            <h5 class="card-title"><i class='fab fa-cc-amazon-pay' style='font-size:36px'></i> Pay through Paytm</h5>
+            <p class="card-text"><i class="fa fa-phone" style="font-size:24px"></i> +91-7079814852<br><i class="material-icons" style="font-size:36px"></i><br>Please pay using the above phone number</p>
+        </div>
+    </div>
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header">Google Pay</div>
+        <div class="card-body text-success">
+            <h5 class="card-title"><i class='fab fa-cc-amazon-pay' style='font-size:36px'></i> Pay through Google pay</h5>
+            <p class="card-text"><i class="fa fa-phone" style="font-size:24px"></i> +91-7079814852<br><i class="material-icons" style="font-size:36px"></i><br>Please pay using the above phone number</p>
+        </div>
+    </div>
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header">Phone Pay</div>
+        <div class="card-body text-success">
+            <h5 class="card-title"><i class='fab fa-cc-amazon-pay' style='font-size:36px'></i> Pay through Pay pal</h5>
+            <p class="card-text"><i class="fa fa-phone" style="font-size:24px"></i> +91-7079814852<br><i class="material-icons" style="font-size:36px"></i><br>Please pay using the above phone number</p>
+        </div>
+    </div>
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header">Bank</div>
+        <div class="card-body text-success">
+            <h5 class="card-title"><i class='fab fa-cc-amazon-pay' style='font-size:36px'></i> Pay Bank/card</h5>
+            <p class="card-text">SBI<br><i class="fa fa-credit-card" style="font-size:24px"></i>Account No:38227173690<br>
+                <i class="fa fa-credit-card" style="font-size:24px"></i>IFSC Code:sbin0004952<br><br><i class="fa fa-cc-mastercard" style="font-size:24px"></i></p>
+        </div>
+    </div>
+</div>
+<br><br><br>
+<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+    <div class="area-title text-center">
+
+        <p>Pay through Above Payment Mode and share Screenshot and details of your donation. </p>
+    </div>
+</div>
+
+
+
+
+<div class="container mb-3 py-4">
+    <h1 class="text-center"></h1>
+    <form method="post" action="/donation">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone Number">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Select Payment Mode</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+      <option>Paytm</option>
+      <option>Google Pay</option>
+      <option>Phone Pay</option>
+      <option>Bhim UPI</option>
+      <option>Through Bank</option>
+    </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Attache Screenshot of payment</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+
+</div>
+
+
+
+
+{% endblock body %}

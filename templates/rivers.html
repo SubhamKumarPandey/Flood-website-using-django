@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Rivers{% endblock title %} {% block body %}
+<div>
+<div style="padding-left:500px">
+<p><img alt="File:India annual rainfall map en.svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/India_annual_rainfall_map_en.svg/530px-India_annual_rainfall_map_en.svg.png" decoding="async" width="530" height="599" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/India_annual_rainfall_map_en.svg/795px-India_annual_rainfall_map_en.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/India_annual_rainfall_map_en.svg/1060px-India_annual_rainfall_map_en.svg.png 2x" data-file-width="1639" data-file-height="1852"></P>
+    </div>
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1>Higest Flooding Rivers in India</h1>
+            <p class="lead text-muted">Need to Contact us, Help us ?</p>
+
+        </div>
+    </section>
+    <div class="card-deck">
+        {% for river in rivers %}
+        <div class="card-deck" style="width:500px; float:left;">
+            <div class="card" style="margin:40px">
+                <img src=" {{river.img}} " class="card-img-top " alt="... " style="height:300px;">
+                <div class="card-body ">
+                    <h5 class="card-title ">{{river.Rivername}}</h5>
+                    <p class="card-text ">{{river.desc}}</p>
+                    <p class="card-text "><small class="text-muted ">Year : {{river.year}}</small></p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock body %}

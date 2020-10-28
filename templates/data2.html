@@ -1,0 +1,35 @@
+{% extends 'data.html' %}{% block title %}data2{% endblock title %} {% block databody %}
+
+<div>
+    <h4 style="text-align: center;">Flood report 1980-2000</h4>
+
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">City name</th>
+                <th scope="col">Location</th>
+                <th scope="col">Cause</th>
+                <th scope="col">Deaths</th>
+                <th scope="col">Collatral Damage </th>
+            </tr>
+        </thead>
+        {% for dat1 in data2 %}
+        <tbody>
+
+            <tr>
+                <th scope="row">{{dat1.id}}</th>
+                <td>{{dat1.name}}</td>
+                <td>{{dat1.loc}}</td>
+                <td>{{dat1.cause}}</td>
+                <td>{{dat1.death}}</td>
+                <td>{{dat1.damage}}</td>
+            </tr>
+
+        </tbody>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock databody %}

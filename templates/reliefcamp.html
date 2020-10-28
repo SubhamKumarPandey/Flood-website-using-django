@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Relief Camp{% endblock title %} {% block body %}
+
+<div>
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1><strong>Relief Camps</strong></h1>
+            <p> We must build dikes of courage to hold back the flood of fear.</p>
+            <p class="lead text-muted">Need to Contact us, Help us ?</p>
+            <p>
+                <a href="/contact" class="btn btn-primary my-2">Contact</a>
+                <a href="/login" class="btn btn-secondary my-2">Login</a>
+            </p>
+        </div>
+    </section>
+
+    <div class="card-deck">
+        {% for camp in camps %}
+        <div class="card-deck" style="width:500px; float:left;">
+            <div class="card" style="margin:40px">
+                <img src=" {{camp.img}} " class="card-img-top " alt="... " style="height:300px;">
+                <div class="card-body ">
+                    <h5 class="card-title ">{{camp.cityname}}</h5>
+                    <p class="card-text ">{{camp.desc}}</p>
+                    <p class="card-text "><small class="text-muted ">number of people in camp : {{camp.people}}</small></p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock body %}
